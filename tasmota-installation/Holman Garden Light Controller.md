@@ -12,7 +12,7 @@ Flash in-place via soldered wires, uses TYWE3L module.
 ## Preperation
 *what's required to do the tasmotering?*
 
-[Datasheet](TYWE3L_datasheet.pdf) saved from https://fccid.io/2ANDL-TYWE3L/User-Manual/User-Manual-3894982.pdf
+[Datasheet](./TYWE3L_datasheet.pdf) saved from https://fccid.io/2ANDL-TYWE3L/User-Manual/User-Manual-3894982.pdf
 
 ## Process
 
