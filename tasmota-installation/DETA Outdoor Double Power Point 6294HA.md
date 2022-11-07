@@ -48,12 +48,20 @@ The 6294HA contains a WB2S vertical mounted module. This needs to be replaced wi
 | IO15 | NC | Not required to be connected |
 | IO2  | NC | Not required to be connected |
 
-Take from [ESP-01N datasheet](./WT-01N_datasheet.pdf)
+Taken from [ESP-01N datasheet](./WT-01N_datasheet.pdf)
 
-GET THE DS FROM ALIBABA LADY AND UPLOAD HERE
+<table>
+<tr>
+    <td>
+        <img src="./6294HA/pinout.png" alt="ESP-01N pin out" style="width:200px;"/>
+    <td>
+    <td>
+        <img src="./6294HA/pinmode.png" alt="ESP-01N pin mode" style="width:200px;"/>
+    <td>
+<tr>
+</table>
 
 - Solder wires onto the chip for each of the PINs requiring connection above. Place solder onto the pins and tin the connecting wire before soldering together.
-- Note IO0 is a circle pad and is not located on the PCB edge
 
 <img src="./6294HA/connections.jpg" alt="ESP-01N connections" style="width:200px;"/>
 
@@ -104,9 +112,36 @@ To test tasmota has flashed successfully:
 
 ## 2. Using heatgun to remove module
 
-- Remove screws to access PCB
+- Remove screws to access PCB both internal and external - 8 in all.
 
 ## 3. Install new module
 
+<img src="./6294HA/openedup.jpg" alt="629HA" style="width:200px;"/>
+
+- Place solder paste on add pins and use heat gun to fix.
+
 ## 4. Configure template 
 
+Get template from https://templates.blakadder.com/deta_6294HA.html
+
+- Open up tasmota UI on device IP
+- Select menu Configuration | Configure Other
+- Paste template {} into other parameters and select activate, hit save
+- Tasmota should reboot to the following UI
+
+<img src="./6294HA/tasmotaui.png" alt="Tasmota UI" style="width:150px;"/>
+
+## 5. Power Calibrate
+
+Based on https://tasmota.github.io/docs/Power-Monitoring-Calibration/
+
+Plug a device with a known wattage into the switch e.g. lamp with known wattage.
+
+Enter following via Tasmota UI console
+<pre>
+PowerSet 9.0 (dependent upon known wattage)
+VoltageSet 240.0
+CurrentSet 37.5 ( powerset / voltageset ) * 1000
+</pre>
+
+Check the power factor is a close to 1.0 as possible.
