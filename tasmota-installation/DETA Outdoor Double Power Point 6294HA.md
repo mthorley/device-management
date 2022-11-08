@@ -4,7 +4,7 @@ DETA outdoor IP54 weatherproof dual switch with energy meter, purchased from Bun
 <img src="https://templates.blakadder.com/assets/device_images/deta_6294HA.webp" alt="629HA" style="width:200px;"/>
 
 ## Method
-Replacement of WB2S module with ESP-01N ESP8285.
+Replacement of WB2S module with ESP-01N ESP8285 or equivalent.
 
 ## FAQs
  - Can tasmotizer flash an ESP-01N ESP8285 module? **Yes**
@@ -137,7 +137,7 @@ Based on https://tasmota.github.io/docs/Power-Monitoring-Calibration/
 
 Plug a device with a known wattage into the switch e.g. lamp with known wattage.
 
-Enter following via Tasmota UI console
+Enter following via Tasmota UI console:
 <pre>
 PowerSet 9.0 (dependent upon known wattage)
 VoltageSet 240.0
