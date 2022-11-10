@@ -144,4 +144,4 @@ VoltageSet 240.0
 CurrentSet 37.5 ( powerset / voltageset ) * 1000
 </pre>
 
-Check the power factor is a close to 1.0 as possible.
+Check the power factor is as close to 1.0 as possible.
